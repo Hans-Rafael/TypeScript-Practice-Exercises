@@ -1,0 +1,18 @@
+{
+  "name": "typescript-practice-exercises",
+  "version": "1.0.0",
+  "description": "Welcome to the **TypeScript Practice Exercises** repository! This project is designed to help you improve and solidify your knowledge of JavaScript and TypeScript through hands-on exercises. The exercises are divided into three levels: **Basic**, **Intermediate**, and **Advanced**, each focusing on key concepts and skills.",
+  "main": "index.js",
+  "scripts": {
+    "basic": "npx ts-node ./runBasicAll.ts",
+    "intermediate": "npx ts-node ./runIntermediateAll.ts",
+    "advanced": "npx ts-node ./runAdvancedAll.ts"
+  },
+  "keywords": [],
+  "author": "Hans Garcia",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
