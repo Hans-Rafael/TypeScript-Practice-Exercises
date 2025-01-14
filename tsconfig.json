@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "target": "ES6",           // Especifica a qué versión de JavaScript se debe compilar. ES6 es una versión moderna y compatible.
+      "module": "commonjs",      // Define el sistema de módulos a usar. "commonjs" es el estándar para Node.js.
+      "strict": true,            // Activa estrictas verificaciones de tipo para ayudar a escribir un código más seguro y consistente.
+      "esModuleInterop": true,   // Permite una mejor interoperabilidad con módulos ES6, facilitando el uso de librerías de JavaScript.
+      "outDir": "./dist"         // Especifica la carpeta donde se generarán los archivos JavaScript compilados.
+    },
+    "include": ["./**/*.ts"]      // Incluye todos los archivos `.ts` en el proyecto, desde cualquier subdirectorio.
+  }
+  
