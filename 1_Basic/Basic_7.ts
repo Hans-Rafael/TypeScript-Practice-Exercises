@@ -49,6 +49,27 @@ entradas.forEach(([clave, valor]) => {
   console.log(`${clave}: ${valor}`);
 });
 //Casting de tipos:
+//OJO El casting no convierte el valor subyacente, simplemente cambia cómo lo interpreta TypeScript.
+// Si haces un casting incorrecto, puedes introducir errores en tiempo de ejecución.
+// using as
+let valor: unknown = "123"; // Tipo desconocido
+let longitud: number = (valor as string).length; // Interpretar `valor` como string
+
+console.log("Longitud:", longitud); // Salida: Longitud: 3
+// using <type>
+let valor2: unknown = "123";
+let longitud2: number = (<string>valor).length; // Interpretar `valor` como string
+
+console.log("Longitud:", longitud); // Salida: Longitud: 3
+//example
+function procesar(valor: unknown): void {
+  if (typeof valor === "string") {
+    console.log((valor as string).toUpperCase());
+  }
+}
+
+procesar("hola"); // Salida: HOLA
+
 // forma simplificada:
 console.log("******Forma Simplificada ********");
 // Función que convierte un objeto en un array de claves
@@ -96,4 +117,3 @@ const entradasx = Object.entries(person) as [
 entradas.forEach(([clave, valor]) => {
   console.log(`${clave}: ${valor}`);
 });
-
