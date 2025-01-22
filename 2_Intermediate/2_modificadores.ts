@@ -46,3 +46,14 @@ class Gato2 extends Animal2 {
     return "El gato maúlla";
   }
 }
+// probar codigo
+const perro2 = new Perro2("Firulais", 3, 100);
+const gato2 = new Gato2("Pelusa", 2, 80);
+console.log(perro2.getNombre());
+console.log(perro2.hacerSonido());
+console.log(gato2.hacerSonido());
+console.log(perro2.getEnergia());
+perro2.setEnergia(-10);
+console.log(perro2.getEnergia());
+perro2.setEnergia(50);
+console.log(perro2.getEnergia());
