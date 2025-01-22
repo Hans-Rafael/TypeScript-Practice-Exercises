@@ -34,3 +34,11 @@ class Gato extends Animal {
     return "¡Miau!";
   }
 }
+//Creating and testing instances
+const perro = new Perro("Rex",3);
+console.log(perro.hacerSonido());// "El perro ladra"
+console.log (perro.ladrar());//"Guau guau"
+
+const gato = new Gato("Misi",2);
+console.log(gato.hacerSonido())//"Gato maulla"
+console.log(gato.maullar())//"Miau"
