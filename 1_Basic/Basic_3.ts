@@ -13,4 +13,5 @@ function abs(x: number | string): number {
     return Math.abs(typeof x === 'number' ? x : parseInt(x));
 }
 // use function
-console.log('abs(-5):', abs(-5));
+console.log('abs(-5):', abs (-5));
+console.log('abs(string: -5):', abs ("-5"));
