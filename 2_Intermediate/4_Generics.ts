@@ -2,6 +2,7 @@
 Generics Avanzados:
 Escribe una función genérica que combine dos objetos en uno.
 */
+//Generic <> puede serr usado en clases y interfaces tambien y cualquier tipo de datos puede ser utilizado.
 //función genérica en TypeScript que combina dos objetos en uno:
 
 function combinarObjetos<X, U > (obj: X, obj2: U): X & U {
