@@ -20,7 +20,7 @@ const obj: MyObjectOptional = {
     age: 30,       // Opcional
     // isActive: true, // También es opcional
   };
-  console.log(obj);
+  console.log(obj); // name: 'Alice', age: 30 }
   
   //metodo 2
 
@@ -35,4 +35,4 @@ const object2: ObjectOptional = {
     //age: 30,
     //isActive: true,
 };
-console.log(object2);
+console.log(object2);//{ name: 'John' }
