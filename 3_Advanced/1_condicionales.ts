@@ -1,3 +1,4 @@
+//npx ts-node ./3_Advanced/script.ts
 /* Types Condicionales:
 Usa un tipo condicional para definir si una propiedad es opcional dependiendo de otra.
  */
