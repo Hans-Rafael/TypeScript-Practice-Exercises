@@ -71,6 +71,7 @@ async function main2() {
     `#${user.id}:${user.name} - ${user.email}\n ADRESS: ${user.address.street} - ${user.address.city} \n PHONE: ${user.phone} \n `
   );
 }
+main2(); 
 getPeopleById(1).then(user => {
     if (user) {
       console.log(`Usuario encontrado: ${user.name} - ${user.email}`);
