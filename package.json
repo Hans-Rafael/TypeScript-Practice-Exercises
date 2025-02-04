@@ -6,7 +6,9 @@
   "scripts": {
     "basic": "npx ts-node ./runBasicAll.ts",
     "intermediate": "npx ts-node ./runIntermediateAll.ts",
-    "advanced": "npx ts-node ./runAdvancedAll.ts"
+    "advanced": "npx ts-node ./runAdvancedAll.ts",
+    "build:dev": "npx tsc -p 3_Advanced/7_tsconfig.dev.json",
+    "build:prod":"npx tsc -p 3_Advanced/7_tsconfig.dev.json"
   },
   "keywords": [],
   "author": "Hans Garcia",
