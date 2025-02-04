@@ -1,13 +1,17 @@
 //Escribe una función en TS que tome un objeto y lo convierta en un array de claves.
+function objToClave<T extends Record<string, unknown>>(objeto: T): string[] {
+  return Object.keys(objeto);
+}
+
+// Ejemplo de uso
 const person1 = {
   name: "John",
   age: 30,
   city: "New York",
 };
-function objToClave<T>(objeto: {}): string[] {
-  const Claves: string[] = Object.keys(person1);
-  return Claves;
-}
+
+console.log(objToClave(person1)); // ✅ ["name", "age", "city"]
+
 console.log("array de claves del objeto person: ", objToClave(person1));
 //usar un array de claves
 interface Persona {
