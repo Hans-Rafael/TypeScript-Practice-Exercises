@@ -15,3 +15,13 @@ function combinarObjetos<X, U > (obj: X, obj2: U): X & U {
 const objetoCombinado = combinarObjetos(objeto1, objeto2);
 console.log(objetoCombinado);
 // Salida esperada: { nombre: "Pepe Locuas", edad: 24, email: "pepe@example.com", telefono: "1234567890" }
+//
+//📌👁‍🗨Podemos mejorar la función restringiendo X y U para que solo acepten objetos con extends Record<string, unknown>:
+
+//✅ Solución mejorada
+function combinarObjetos2<X extends Record<string, unknown>, U extends Record<string, unknown>>(
+  obj: X,
+  obj2: U
+): X & U {
+  return { ...obj, ...obj2 };
+}
