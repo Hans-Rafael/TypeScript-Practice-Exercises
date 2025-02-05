@@ -8,14 +8,16 @@
     "intermediate": "npx ts-node ./runIntermediateAll.ts",
     "advanced": "npx ts-node ./runAdvancedAll.ts",
     "build:dev": "npx tsc -p 3_Advanced/7_tsconfig.dev.json",
-    "build:prod":"npx tsc -p 3_Advanced/7_tsconfig.dev.json"
+    "build:prod": "npx tsc -p 3_Advanced/7_tsconfig.dev.json"
   },
   "keywords": [],
   "author": "Hans Garcia",
   "license": "MIT",
   "dependencies": {
     "@types/axios": "^0.9.36",
+    "@types/lodash": "^4.17.15",
     "axios": "^1.7.9",
+    "lodash": "^4.17.21",
     "npm": "^11.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
