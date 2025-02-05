@@ -1,4 +1,5 @@
 "use strict";
+// Define un enum para los días de la semana y usa una función que reciba un día y devuelva si es laborable.
 var DiasLaborables;
 (function (DiasLaborables) {
     DiasLaborables[DiasLaborables["Lunes"] = 0] = "Lunes";
@@ -10,7 +11,11 @@ var DiasLaborables;
 function esDiaLaborable(dia) {
     return dia >= DiasLaborables.Lunes && dia <= DiasLaborables.Viernes;
 }
+// use function
 console.log('esDiaLaborable(DiasLaborables.Miércoles):', esDiaLaborable(DiasLaborables.Miércoles));
+// Arrays y Tuplas:
+// Definición de un array de strings
 let diasLaborables = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
+// Definición de una tupla
 let diasSemana = ['primero', 'segundo', 'tercero', 'cuarto', 'quinto', 'sexto', 'septimo', 7];
 console.log('diasLaborables:', diasLaborables, 'diasSemana:', diasSemana);

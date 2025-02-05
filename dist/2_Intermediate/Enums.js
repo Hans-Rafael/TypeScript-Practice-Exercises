@@ -1,4 +1,6 @@
 "use strict";
+/* Enums y Funciones:
+Combina enum con una función que reciba un valor del enum y devuelva una acción específica. */
 var NotificationType;
 (function (NotificationType) {
     NotificationType["Success"] = "SUCCESS";
@@ -22,6 +24,7 @@ function handleNotification(notification) {
 }
 console.log(handleNotification(NotificationType.Success));
 console.log(handleNotification(NotificationType.Error));
+// ejemplo 2
 var Accion;
 (function (Accion) {
     Accion[Accion["Saludar"] = 0] = "Saludar";

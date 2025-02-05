@@ -1,4 +1,7 @@
 "use strict";
+/* Trabajando con API:
+Usa axios con TypeScript para consumir datos de una API pública. */
+//axios on TS para TS npm install axios @types/axios
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -12,6 +15,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// crear funcion para obtener datos
 const axios_1 = __importDefault(require("axios"));
 const API_URL = "https://jsonplaceholder.typicode.com/users";
 function getPeople() {
@@ -26,6 +30,7 @@ function getPeople() {
         }
     });
 }
+//Consumir la API
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const users = yield getPeople();
@@ -35,7 +40,9 @@ function main() {
         });
     });
 }
+// llamo la funcion y ejecuto.
 main();
+//Extensión: Búsqueda por ID
 function getPeopleById(id) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -48,6 +55,7 @@ function getPeopleById(id) {
         }
     });
 }
+// use example asinc/await y .then()
 function main2() {
     return __awaiter(this, void 0, void 0, function* () {
         const user = yield getPeopleById(2);
@@ -64,6 +72,8 @@ getPeopleById(1).then(user => {
         console.log("Usuario no encontrado.");
     }
 });
+//
+//Obtener una lista de usuarios con map()
 function fetchUsersByIds(ids) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -77,6 +87,7 @@ function fetchUsersByIds(ids) {
 }
 console.log("*** example get by IDs dinámicos *** ");
 fetchUsersByIds([1, 2, 3, 4, 5]);
+//usuarios por nombre de compañía
 function getUsersByCompany(companyName) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -89,4 +100,18 @@ function getUsersByCompany(companyName) {
         }
     });
 }
+// Ejemplo de uso
 getUsersByCompany("Romaguera-Crona");
+// mas Eficiente 
+/* async function fetchUsersByCompany(companyName: string) {
+  try {
+    const response = await axios.get(`https://api.ejemplo.com/users?company=${companyName}`);
+    const users = response.data;
+
+    console.log(`Usuarios que trabajan en ${companyName}:`, users);
+  } catch (error) {
+    console.error("Error obteniendo usuarios:", error);
+  }
+}
+// Uso
+fetchUsersByCompany("Romaguera-Crona"); */ 

@@ -33,12 +33,12 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs = __importStar(require("fs"));
-const child_process_1 = require("child_process");
-const dir = './1_Basic';
-fs.readdirSync(dir)
-    .filter((file) => file.endsWith('.ts'))
+const fs = __importStar(require("fs")); //Es el módulo de Node.js que permite interactuar con el sistema de archivos
+const child_process_1 = require("child_process"); //Es el módulo de Node.js que permite ejecutar comandos externos,para ejecutar cada archivo .ts con ts-node.
+const dir = './1_Basic'; // Especifica la carpeta donde se encuentran los archivos .ts
+fs.readdirSync(dir) // Lee la carpeta y devuelve un array con los nombres de los archivos
+    .filter((file) => file.endsWith('.ts')) // Filtra los archivos que terminan con .ts
     .forEach((file) => {
-    console.log(`Ejecutando ${file}...`);
-    (0, child_process_1.execSync)(`npx ts-node ${dir}/${file}`, { stdio: 'inherit' });
+    console.log(`Ejecutando ${file}...`); // Imprime el nombre del archivo
+    (0, child_process_1.execSync)(`npx ts-node ${dir}/${file}`, { stdio: 'inherit' }); // Ejecuta el archivo .ts con ts-node
 });
