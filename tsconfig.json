@@ -6,7 +6,9 @@
     "strict": true, // Activa estrictas verificaciones de tipo para ayudar a escribir un código más seguro y consistente.
     "esModuleInterop": true, // Permite una mejor interoperabilidad con módulos ES6, facilitando el uso de librerías de JavaScript.
     "outDir": "./dist", // Especifica la carpeta donde se generarán los archivos JavaScript compilados.
-    "experimentalDecorators":true // para evitar errores en nuevas versiones con decorador
+    "experimentalDecorators": true, // para evitar errores en nuevas versiones con decorador
+    "skipLibCheck": true, // Evita la verificación de archivos de definición de librerías.
+    "forceConsistentCasingInFileNames": true // asegura que todos los archivos importados en tu proyecto usen la misma capitalización
   },
   "include": [
     "./**/*.ts"
